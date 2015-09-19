@@ -1,0 +1,41 @@
+body.home {
+  background-color: $darkprimary;
+  color: $specialtext;
+  font-family: $headings;
+
+  .main-nav a{
+    &:hover, &:focus {
+      border: none;
+      background: none;
+    }
+  }
+
+}
+
+.front {
+  //vertical centering
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+
+  p {
+    &:nth-of-type(2){
+      margin: 1.5em 0 3em;
+      font-size: 1.3em;
+    }
+  }
+
+  .front-name {
+    font-family: $headings;
+    font-size: (4.5 * 100%);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+}

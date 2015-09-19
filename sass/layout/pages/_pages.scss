@@ -1,0 +1,34 @@
+//front page
+@import "homepage";
+
+.posts, .about, .contact {
+  background-image: url(http://www.transparenttextures.com/patterns/diamond-eyes.png);
+
+  section, article {
+    &:nth-of-type(even){
+      background-color: lighten($divider, 18%);
+    }
+  }
+
+  article {
+    padding: 7.5em 0;
+
+    &:last-of-type {
+      margin-bottom: 3em;
+    }
+  }
+}
+
+main header {
+  background-color: $darkprimary;
+  text-align: center;
+
+  h1.page-title {
+    margin: 0;
+    padding: 2.25em 0;
+    color: $specialtext;
+  }
+}
+
+//posts page aka url/portfolio
+@import "postspage";

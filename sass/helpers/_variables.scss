@@ -1,0 +1,90 @@
+//Fonts
+$site-title: 'Old Standard TT', Cambria, 'Times New Roman', serif;
+$headings: 'Raleway', sans-serif;
+$paragraph: 'Roboto', sans-serif;
+
+//Colors
+$darkprimary: #0097A7;
+$primary: #00BCD4;
+$lightprimary: #B2EBF2;
+$specialtext: rgba(#FFFFFF, 0.8);
+$accent: #607D8B;
+$primarytext: #212121;
+$secondarytext: #727272;
+$divider: #B6B6B6;
+
+//Mixins
+%img-shadow {
+  box-shadow: 0 5px 8px -2px rgba($secondarytext, 0.4);
+}
+
+@import "hoverCSS/hacks";
+@import "hoverCSS/mixins";
+@import "hoverCSS/options";
+
+/*@mixin ghost-button($display: inline-block, $active: $specialtext, $hover: $accent, $border: 2px){
+  @extend %raleway;
+  @extend %img-shadow;
+  position: relative;
+  display: $display;
+  padding: 0.75em 1.25em;
+  border: $border solid $active;
+  border-radius: 8px;
+  color: $active;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  &:hover, &:focus {
+    background-color: $hover;
+    border-color: $hover;
+    color: lighten($hover, 60%);
+    text-decoration: none;
+  }
+}*/
+
+
+/* Shutter Out Vertical */
+@mixin ghost-button($display: inline-block, $active: $specialtext, $hover: $accent, $border: 2px) {
+  @extend %img-shadow;
+  @include hacks();
+  position: relative;
+  display: $display;
+  padding: 0.75em 1.25em;
+  border: $border solid $active;
+  border-radius: 8px;
+  color: $active;
+  font-weight: 600;
+  letter-spacing: 1px;
+  @include prefixed(transition-property, color);
+  @include prefixed(transition-duration, $mediumDuration);
+
+  @include prefixed(transition-property, border);
+  @include prefixed(transition-duration, $mediumDuration);
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $hover;
+    @include prefixed(transform, scaleY(0));
+    @include prefixed(transform-origin, 50%);
+    @include prefixed(transition-property, transform);
+    @include prefixed(transition-duration, 0.2s);
+    @include prefixed(transition-timing-function, ease-out);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $hover;
+    color: lighten($hover, 60%);
+
+    &:before {
+      @include prefixed(transform, scaleY(1));
+    }
+  }
+}

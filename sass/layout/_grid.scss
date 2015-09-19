@@ -1,0 +1,21 @@
+html, body {
+  min-height: 100%;
+  background-color: darken(#FFF, 5%);
+}
+
+.site-container {
+  @include container(100%);
+  min-height: 100vh;
+  position: relative;
+  @extend %clearfix;
+}
+
+.wrap {
+  @include container(68%);
+  min-width: 1024px;
+
+}
+
+section, article {
+  @extend %clearfix;
+}

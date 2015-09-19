@@ -1,0 +1,36 @@
+article.piece {
+  .piece-desc {
+    @include span(6 last);
+    padding: 0 4em;
+  }
+
+  .buttons {
+    margin-top: 3em;
+    text-align: center;
+  }
+}
+
+//featured image
+.piece {
+  .featured-image {
+    @include span(6);
+    min-width: 30em;
+    height: 35em;
+    overflow: hidden;
+    @extend %img-shadow;
+
+
+    img{
+      display: block;
+      width: 100%;
+      opacity: 0.85;
+      transition: transform 5.5s ease .5s;
+
+      &:hover {
+        transform: translateY(-28%);
+        transition: transform 5.5s ease;
+      }
+    }
+
+  }
+}

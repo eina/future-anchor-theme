@@ -1,0 +1,19 @@
+.button, button, .case-study, .view-live {
+  font-family: $headings;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+//front page button
+.button {
+  @include ghost-button();
+}
+
+.case-study, .view-live {
+  @include ghost-button($active: $darkprimary);
+}
+
+.case-study {
+  margin-right: 1.5em;
+}

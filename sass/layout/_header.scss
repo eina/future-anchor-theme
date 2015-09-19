@@ -1,0 +1,70 @@
+#header{
+  @extend %clearfix;
+  width: 100%;
+  height: 3.5em;
+  z-index: 9999;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+
+
+  .site-title {
+    @include span(4 of 12);
+    display: inline-block;
+    margin-top: .22em;
+    font-size: 2.5em;
+    font-family: $site-title;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  nav.main-nav {
+    @include span(5 last);
+    font-family: $headings;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+}
+
+.main-nav {
+  ul{
+    list-style: none;
+    margin: 0;
+
+    li {
+      float: left;
+      font-weight: 600;
+      line-height: 3.5em;
+
+      @import "../helpers/hoverCSS/overline-reveal";
+
+      a {
+        display: block;
+        padding: 0 1.5em;
+        color: $specialtext;
+        opacity: 0.7;
+        transition: all 0.3s ease-in-out;
+
+        &:hover, &:focus, &.active {
+          opacity: 1;
+          @include overline-reveal;
+          background-color: lighten($darkprimary, 3%);
+          border-top: 3px solid darken($lightprimary, 13%);
+        }
+      }
+
+    }
+  }
+}
+
+.posts, .about, .contact {
+  .site-header {
+    background-color: $darkprimary;
+    border-bottom: 1px solid rgba($accent, 0.6);
+    box-shadow: 0 1px 5px 0 rgba($accent,0.45);
+  }
+}
