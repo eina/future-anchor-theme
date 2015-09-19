@@ -1,0 +1,5 @@
+Theme name:    Portfolio v.1
+Description:   My portfolio, built on Anchor CMS
+Author name:   Eina Onting
+Author site:   http://eina.ca
+License:       tbd
