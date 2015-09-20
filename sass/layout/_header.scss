@@ -10,19 +10,44 @@
   top: 0;
   overflow: hidden;
 
+  a {
+    color: $specialtext;
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+
+    &:hover, &:focus, &.active{
+      opacity: 1;
+    }
+  }
 
   .site-title {
-    @include span(4 of 12);
-    display: inline-block;
+    @include span(4);
     margin-top: .22em;
     font-size: 2.5em;
     font-family: $site-title;
     text-transform: none;
     letter-spacing: 0;
+
+    .fullname, .initials {
+      display: none;
+    }
+
+    @media all and (max-width: 920px){
+      .initials {
+        display: inline;
+      }
+    }
+
+    @media all and (min-width: 920px){
+      .fullname {
+        display: inline;
+      }
+    }
+
   }
 
   nav.main-nav {
-    @include span(5 last);
+    @include span(7 last);
     font-family: $headings;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -34,29 +59,42 @@
   ul{
     list-style: none;
     margin: 0;
+    width: auto;
+    float: right;
+
 
     li {
       float: left;
       font-weight: 600;
       line-height: 3.5em;
 
-      @import "../helpers/hoverCSS/overline-reveal";
-
-      a {
-        display: block;
-        padding: 0 1.5em;
-        color: $specialtext;
-        opacity: 0.7;
-        transition: all 0.3s ease-in-out;
-
-        &:hover, &:focus, &.active {
-          opacity: 1;
-          @include overline-reveal;
-          background-color: lighten($darkprimary, 3%);
-          border-top: 3px solid darken($lightprimary, 13%);
+      @media all and (min-width: 1030px){
+        &.mnav {
+          display: none;
         }
       }
 
+      @media all and (max-width: 1030px){
+        &.nav__portfolio,
+        &.nav__about,
+        &.nav__contact {
+          display: none;
+        }
+      }
+
+    }
+  }
+
+  @import "../helpers/hoverCSS/overline-reveal";
+
+  a {
+    display: block;
+    padding: 0 1.5em;
+
+    &:hover, &:focus, &.active {
+      @include overline-reveal;
+      background-color: lighten($darkprimary, 3%);
+      border-top: 3px solid darken($lightprimary, 13%);
     }
   }
 }

@@ -11,10 +11,22 @@ html, body {
 }
 
 .wrap {
-  @include container(68%);
-  min-width: 1024px;
+  @include container(93%);
 
+  @media all and (min-width: 1240px){
+    @include container(90%);
+  }
+
+  @media all and (min-width: 1440px){
+    @include container(79%);
+  }
+
+  @media all and (min-width: 1680px){
+    @include container(68%);
+  }
 }
+
+//next breakpoint is 990px
 
 section, article {
   @extend %clearfix;

@@ -1,7 +1,25 @@
-article.piece {
+.piece {
   .piece-desc {
-    @include span(6 last);
-    padding: 0 4em;
+    padding: 0 (gutter() * 3);
+    @media all and (min-width: 1050px){
+      @include span(6 last);
+      padding: 0 (gutter() * 2);
+
+      .description {
+        padding: 0 gutter();
+      }
+    }
+  }
+
+  .post-title {
+    text-align: center;
+    @media all and (min-width: 1050px){
+      margin-top: 2 * $leading;
+    }
+
+    @media all and (min-width: 1260px){
+      margin-top: 4 * $leading;
+    }
   }
 
   .buttons {
@@ -12,12 +30,25 @@ article.piece {
 
 //featured image
 .piece {
+
   .featured-image {
-    @include span(6);
-    min-width: 30em;
-    height: 35em;
+    display: none;
     overflow: hidden;
     @extend %img-shadow;
+
+    @media all and (min-width: 600px){
+      display: block;
+      @include span(10);
+      float: none;
+      margin: 0 auto;
+      height: 15em;
+    }
+
+    @media all and (min-width: 1050px){
+      @include span(6);
+      min-width: 30em;
+      height: 35em;
+    }
 
 
     img{
