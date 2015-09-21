@@ -1,6 +1,6 @@
 <footer>
     <div class="wrap">
-        <span class="regular">This site was built with love & Anchor by Eina Onting.</span><span class="mobile_footer">About / Contact / Top</span>
+        <span class="regular">This site was built with love & Anchor by Eina Onting.</span><span class="mobile_footer"><a href="<?php echo base_url();?>about">About</a> / <a href="<?php echo base_url();?>contact">Contact</a> / <a href="#top">Top</a></span>
     </div>
 </footer>
 </div><!--end site-container-->

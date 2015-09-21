@@ -16,6 +16,7 @@ main {
 }
 
 .wrap {
+  @extend %clearfix;
   @include container(93%);
 
   @media all and (min-width: 1240px){
@@ -28,6 +29,10 @@ main {
 
   @media all and (min-width: 1680px){
     @include container(68%);
+  }
+
+  @media all and (min-width: 2000px){
+    @include container(45%);
   }
 }
 

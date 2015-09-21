@@ -6,20 +6,30 @@ $imgSlug = article_custom_field('img-slug');?>
             <header><!-- style="background:url('/anchor/content/<?php echo $imgSlug;?>-head.jpg') no-repeat center top; background-size: cover;"-->
                 <h1 class="page-title"><?php echo article_title();?></h1>
             </header>
-            <article class="description">
+            <article class="article__intro">
                 <div class="wrap">
-                    <div class="content">
+                    <div class="article__content">
                         <h2>Introduction</h2>
                         <?php echo article_description();?>
                         <h3>Built With</h3>
                         <?php show_tags();?>
                         <?php show_extra('div', 'extra');?>
                     </div>
-                    <figure class="screenshot"><?php feat_img();?></figure>
+                    <figure class="screenshot">
+                        <?php feat_img();?>
+                        <figcaption>TSP Schedule Page</figcaption>
+                    </figure>
                 </div>
             </article>
-            <article class="details">
-                <div class="wrap"><?php echo article_markdown();?></div>
+            <article class="article__details">
+                <div class="wrap">
+                    <div class="screen-gallery">
+                        i'm a fake gallery lalalalallalala
+                    </div>
+                    <div class="article__content">
+                        <?php echo article_markdown();?>
+                    </div>
+                </div>
             </article>
         </section><!--end post container-->
     </main>

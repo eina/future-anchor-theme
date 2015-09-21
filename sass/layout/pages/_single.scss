@@ -1,0 +1,68 @@
+.single{
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  .screenshot {
+    @extend %img-shadow;
+  }
+
+  figcaption {
+    background-color: lighten($secondarytext, 45%);
+    color: $secondarytext;
+    text-align: center;
+    padding: 0.5em 0;
+  }
+
+  //general article styling
+  article {
+    padding: 1em 0;
+
+    @media screen and (min-width: 1024px){
+      padding: 2em 0;
+      .wrap {
+        padding: 0 3em;
+      }
+    }
+
+    @media screen and (min-width: 1440px){
+      padding: 4em 0;
+      .wrap {
+        padding: 0 7em;
+      }
+    }
+  }
+
+  .article__intro {
+    @media screen and (min-width: 1024px){
+      .article__content {
+        @include span (5);
+      }
+      .screenshot {
+        @include span (6 last);
+      }
+    }
+
+    @media screen and (min-width: 1440px){
+      .article__content {
+        @include span (5);
+      }
+      .screenshot {
+        @include span (6 last);
+      }
+    }
+  }
+
+  //content article styling
+  .article__details {
+    .screen-gallery{
+      @include span(4 last);
+      height: 500px;
+      margin-bottom: gutter();
+      padding: gutter();
+      background-color: #00808d;
+    }
+  }
+}
+

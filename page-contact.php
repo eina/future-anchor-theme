@@ -26,10 +26,6 @@
                     <button>Send Message</button>
                 </form>
 
-                <div class="right">
-                    <h2>Find Me Elsewhere</h2>
-                    <?php echo page_content();?>
-                </div>
             </div>
         </article>
     </main>

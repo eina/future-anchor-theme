@@ -2,8 +2,14 @@
     <!--start the blog page-->
     <main>
         <header>
-            <h1 class="page-title"><?php echo page_name();?></h1>
+            <?php if(is_homepage() && is_homepage()):?>
+                <div class="portfolio-header"><?php echo page_content();?></div>
+            <?php endif;?>
+            <?php if(is_postspage() && !is_homepage()):?>
+                <h1><?php echo page_title();?></h1>
+            <?php endif;?>
         </header>
+        <span id="content"></span>
         <?php if( has_posts() ) : while ( posts() ): ?>
             <article class="piece"><!--contains the post-->
                 <div class="wrap"><!--wrap that content-->

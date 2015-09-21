@@ -1,9 +1,9 @@
 <header id="header" class="site-header">
     <div class="wrap">
 
-        <?php if(!is_homepage()):?>
+        <?php //if(!is_homepage()):?>
             <h1 class="site-title"><a href="<?php echo base_url();?>" title="Home Page"><span class="initials">EO</span><span class="fullname"><?php echo site_name();?></span></a></h1>
-        <?php endif;?>
+        <?php //endif;?>
 
         <nav role="navigation" class="main-nav">
             <ul>

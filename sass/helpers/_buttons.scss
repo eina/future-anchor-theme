@@ -12,7 +12,8 @@
 
 .case-study, .view-live {
   @include ghost-button($active: $darkprimary);
-  @media all and (max-width: 420px){
+
+  @media all and (max-width: 494px){
     display: block;
     width: span(9);
     margin: 0 auto;
@@ -20,11 +21,11 @@
 }
 
 .case-study {
-  @media all and (min-width: 420px){
+  @media all and (min-width: 494px){
     margin-right: 1.5em;
   }
 
-  @media all and (max-width: 420px){
+  @media all and (max-width: 494px){
     margin-bottom: 1em;
   }
 }

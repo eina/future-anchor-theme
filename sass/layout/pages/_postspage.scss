@@ -1,31 +1,53 @@
 .piece {
   .piece-desc {
     padding: 0 (gutter() * 3);
-    @media all and (min-width: 1050px){
+
+
+    .description {
+      padding: 0 gutter();
+    }
+
+    .post-title {
+      text-align: center;
+      margin-top: 0;
+
+    }
+
+    .buttons {
+      margin-top: 3em;
+      text-align: center;
+    }
+
+    @media all and (min-height: 380px) and (orientation: landscape){
+      padding: 0 (gutter() * 2);
+
+      .post-title{
+        font-size: 1.45 * $scale * 1rem;
+      }
+    }
+
+    @media all and (min-width: 667px) and (orientation: landscape){
+      padding: (gutter()*3) (gutter() * 2);
+    }
+
+    @media all and (min-width: 1024px){
       @include span(6 last);
       padding: 0 (gutter() * 2);
 
-      .description {
-        padding: 0 gutter();
+      .post-title {
+        margin-top: 1.25em;
       }
     }
-  }
 
-  .post-title {
-    text-align: center;
-    @media all and (min-width: 1050px){
-      margin-top: 2 * $leading;
+    @media screen and (min-width: 1280px) {
+      .post-title {
+        margin-top: 2.25em;
+      }
     }
 
-    @media all and (min-width: 1260px){
-      margin-top: 4 * $leading;
-    }
+
   }
 
-  .buttons {
-    margin-top: 3em;
-    text-align: center;
-  }
 }
 
 //featured image
@@ -36,28 +58,31 @@
     overflow: hidden;
     @extend %img-shadow;
 
-    @media all and (min-width: 600px){
-      display: block;
-      @include span(10);
-      float: none;
-      margin: 0 auto;
-      height: 15em;
-    }
-
-    @media all and (min-width: 1050px){
-      @include span(6);
-      min-width: 30em;
-      height: 35em;
-    }
-
-
     img{
       display: block;
       width: 100%;
-      opacity: 0.85;
+      opacity: 0.80;
       transition: transform 5.5s ease .5s;
+    }
 
-      &:hover {
+    @media all and (min-width: 700px){
+      display: block;
+      @include span(10);
+      float: none;
+      margin: 0 auto (gutter()*3);
+      height: 15em;
+    }
+
+    @media all and (min-width: 960px){
+      margin-bottom: 0;
+    }
+
+    @media all and (min-width: 1024px){
+      @include span(6);
+      min-width: 20em;
+      height: 30em;
+
+      img:hover {
         transform: translateY(-28%);
         transition: transform 5.5s ease;
       }

@@ -1,0 +1,58 @@
+.contact article{
+  p{
+    margin-bottom: 2.5em;
+  }
+}
+
+//contact form
+.contact {
+
+  form {
+    width: 50%;
+    float: left;
+    margin-right: 1em;
+    @extend %clearfix;
+
+    label, button, input, textarea {
+      display: block;
+      border: none;
+    }
+
+    label {
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin: 0.3em 0 1.3em;
+      padding: 0.3em;
+      background: none;
+      border-bottom: 2px solid $secondarytext;
+      color: $secondarytext;
+      font-weight: normal;
+      font-size: 100%;
+      transition: border 0.3s ease, background-color 0.2s ease;
+
+      &:focus {
+        outline: none;
+        background-color: rgba(lighten($divider, 18%), 0.8);
+        border-color: $accent;
+      }
+    }
+
+    textarea {
+      resize: none;
+      height: auto;
+      overflow: visible;
+    }
+
+    button {
+      background: transparent;
+      float: right;
+      @include ghost-button( $active: darken($primary, 5%), $hover: $primarytext);
+    }
+
+  }
+
+}

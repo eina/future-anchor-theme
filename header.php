@@ -27,7 +27,7 @@
 <?php
 echo '<body class="'.body_class().'">';
 ?>
-<div class="site-container">
+<div class="site-container" id="top">
 <?php theme_include('head-nav');?>
 
 
