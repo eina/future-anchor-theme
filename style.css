@@ -792,7 +792,7 @@ main {
     clear: both;
   }
 }
-@media all and (min-width: 2000px) {
+@media all and (min-width: 2400px) {
   .wrap {
     max-width: 45%;
     margin-left: auto;

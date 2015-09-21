@@ -31,7 +31,7 @@ main {
     @include container(68%);
   }
 
-  @media all and (min-width: 2000px){
+  @media all and (min-width: 2400px){
     @include container(45%);
   }
 }
