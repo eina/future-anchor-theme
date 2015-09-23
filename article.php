@@ -24,6 +24,7 @@ $imgSlug = article_custom_field('img-slug');?>
             <article class="article__details">
                 <div class="wrap">
                     <div class="screen-gallery" id="gallery" data-chocolat-title="<?php echo article_title();?> &mdash; Screenshots">
+                        <h3>Screenshots</h3>
                         <?php images_for_post();?>
                     </div>
                     <div class="article__content">

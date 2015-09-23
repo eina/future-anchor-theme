@@ -404,7 +404,7 @@ html {
 }
 
 /*Helpers*/
-.button, .case-study, .view-live, .contact form button, .piece .featured-image, .single .screenshot, .single .article__details .screen-gallery .shot {
+.button, .case-study, .view-live, .contact form button, .piece .featured-image, .single .article__intro figure.screenshot, .single .article__details .screen-gallery .shot {
   box-shadow: 0 5px 8px -2px rgba(114, 114, 114, 0.4);
 }
 
@@ -577,7 +577,7 @@ html {
 /* Copy & Lists */
 p {
   line-height: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 0;
 }
 
@@ -1239,13 +1239,16 @@ main header .portfolio-header .button {
     padding: 0 1.69492%;
   }
 }
-@media screen and (min-width: 1024px) {
+.single .article__intro figure.screenshot {
+  background-color: #00808d;
+}
+@media screen and (min-width: 960px) {
   .single .article__intro .article__content {
     width: 40.67797%;
     float: left;
     margin-right: 1.69492%;
   }
-  .single .article__intro .screenshot {
+  .single .article__intro figure.screenshot {
     width: 49.15254%;
     float: right;
     margin-right: 0;
@@ -1257,30 +1260,44 @@ main header .portfolio-header .button {
     float: left;
     margin-right: 1.69492%;
   }
-  .single .article__intro .screenshot {
+  .single .article__intro figure.screenshot {
     width: 49.15254%;
     float: right;
     margin-right: 0;
   }
 }
-.single .article__content {
-  width: 57.62712%;
-  float: right;
-  margin-right: 0;
+.single .article__details .screen-gallery .shot {
+  display: none;
 }
-.single .article__details .screen-gallery {
-  width: 40.67797%;
-  float: left;
-  margin-right: 1.69492%;
-  padding: 1.69492%;
+.single .article__details .screen-gallery .title {
+  display: list-item;
 }
 .single .article__details .screen-gallery h3 {
-  margin-bottom: 1em;
-}
-.single .article__details .screen-gallery .shot {
   display: block;
-  width: 100%;
-  margin-bottom: 1em;
+}
+@media screen and (min-width: 960px) {
+  .single .article__details .article__content {
+    width: 57.62712%;
+    float: right;
+    margin-right: 0;
+  }
+  .single .article__details .screen-gallery {
+    width: 40.67797%;
+    float: left;
+    margin-right: 1.69492%;
+    padding: 1.69492%;
+  }
+  .single .article__details .screen-gallery ul {
+    list-style: none;
+  }
+  .single .article__details .screen-gallery h3, .single .article__details .screen-gallery .title {
+    display: none;
+  }
+  .single .article__details .screen-gallery .shot {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+  }
 }
 
 footer {
@@ -1313,7 +1330,7 @@ footer .mobile_footer {
 }
 
 /*Clearing*/
-.site-container:after, .wrap:after, section:after, article:after, #header:after, .contact form:after, footer:after {
+.site-container:after, .wrap:after, section:after, article:after, #header:after, .contact form:after, .single .article__intro:after, footer:after {
   content: "";
   display: table;
   clear: both;

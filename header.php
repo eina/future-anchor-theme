@@ -73,10 +73,14 @@ function images_for_post(){
     $imgSlug = article_custom_field('img-slug');
     if(!empty($imgSlug)){
         //put the files with the slug in an array
-        $images = glob('content/'.$imgSlug.'/*.jpg');
+        $images = glob('content/'.$imgSlug.'/{*.jpg,*.png}', GLOB_BRACE);
+        echo '<ul>';
         foreach ($images as $anImage){
-            echo '<a class="chocolat-image" href="/anchor/'.$anImage.'"><img class="shot" src="/anchor/'.$anImage.'" alt="'.article_title().' Screenshot"></a>';
+            echo '<li><a class="chocolat-image" href="/anchor/'.$anImage.'">';
+            echo '<span class="title">I am a title</span>';
+            echo'<img class="shot" src="/anchor/'.$anImage.'" alt="'.article_title().' Screenshot"></a></li>';
         }
+        echo '</ul>';
     }
 }
 

@@ -40,7 +40,8 @@ $(function() {
 
 $(function() {
     $('#gallery').Chocolat({
-        imageSize: 'contain'
+        imageSize: 'contain',
+        loop: true
     });
 });
 

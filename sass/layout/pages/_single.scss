@@ -4,10 +4,6 @@
     display: block;
   }
 
-  .screenshot {
-    @extend %img-shadow;
-  }
-
   figcaption {
     background-color: lighten($secondarytext, 45%);
     color: $secondarytext;
@@ -35,11 +31,21 @@
   }
 
   .article__intro {
-    @media screen and (min-width: 1024px){
+    @extend %clearfix;
+
+    .article__content {
+    }
+
+    figure.screenshot {
+      background-color: #00808d;
+      @extend %img-shadow;
+    }
+
+    @media screen and (min-width: 960px){
       .article__content {
         @include span (5);
       }
-      .screenshot {
+      figure.screenshot {
         @include span (6 last);
       }
     }
@@ -48,36 +54,55 @@
       .article__content {
         @include span (5);
       }
-      .screenshot {
+      figure.screenshot {
         @include span (6 last);
       }
     }
   }
 
   //content article styling
-  .article__content {
-    @include span(7 last);
-  }
-
   .article__details {
-    .screen-gallery{
-      @include span(5);
-      //height: 500px;
-      padding: gutter();
-      //background-color: #00808d;
-
-      h3 {
-        margin-bottom: 1em;
-      }
-
+    .screen-gallery {
       .shot {
         @extend %img-shadow;
-        display: block;
-        width: 100%;
-        margin-bottom: 1em;
+        display: none;
       }
 
+      .title {
+        display: list-item;
+        //margin: 0.35em 0 0.35em 0.75em;
+      }
 
+      h3 {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 960px){
+      .article__content {
+        @include span(7 last);
+      }
+
+      .screen-gallery{
+        @include span(5);
+        //height: 500px;
+        padding: gutter();
+        //background-color: #00808d;
+
+        ul {
+          list-style: none;
+        }
+
+        h3, .title {
+          display: none;
+        }
+
+        .shot {
+          display: block;
+          width: 100%;
+          margin-bottom: 1em;
+        }
+      }
     }
   }
 
