@@ -29,7 +29,7 @@
     @media screen and (min-width: 1440px){
       padding: 4em 0;
       .wrap {
-        padding: 0 7em;
+        padding: 0 gutter();
       }
     }
   }
@@ -55,14 +55,31 @@
   }
 
   //content article styling
+  .article__content {
+    @include span(7 last);
+  }
+
   .article__details {
     .screen-gallery{
-      @include span(4 last);
-      height: 500px;
-      margin-bottom: gutter();
+      @include span(5);
+      //height: 500px;
       padding: gutter();
-      background-color: #00808d;
+      //background-color: #00808d;
+
+      h3 {
+        margin-bottom: 1em;
+      }
+
+      .shot {
+        @extend %img-shadow;
+        display: block;
+        width: 100%;
+        margin-bottom: 1em;
+      }
+
+
     }
   }
+
 }
 

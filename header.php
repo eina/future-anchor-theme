@@ -7,11 +7,13 @@
     <meta name="generator" content="Anchor CMS" />
 
     <link rel="stylesheet" href="<?php echo theme_url('style.css')?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo theme_url('chocolat/chocolat.css')?>" type="text/css">
 
     <!--fonts-->
     <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+
 
     <title><?php
         if (!is_homepage() && !is_postspage()){
@@ -71,9 +73,9 @@ function images_for_post(){
     $imgSlug = article_custom_field('img-slug');
     if(!empty($imgSlug)){
         //put the files with the slug in an array
-        $images = glob('content/'.$imgSlug.'*.jpg');
+        $images = glob('content/'.$imgSlug.'/*.jpg');
         foreach ($images as $anImage){
-            echo '<img class="shot" src="/anchor/'.$anImage.'" alt="'.article_title().' Screenshot">';
+            echo '<a class="chocolat-image" href="/anchor/'.$anImage.'"><img class="shot" src="/anchor/'.$anImage.'" alt="'.article_title().' Screenshot"></a>';
         }
     }
 }

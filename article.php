@@ -23,8 +23,8 @@ $imgSlug = article_custom_field('img-slug');?>
             </article>
             <article class="article__details">
                 <div class="wrap">
-                    <div class="screen-gallery">
-                        i'm a fake gallery lalalalallalala
+                    <div class="screen-gallery" id="gallery" data-chocolat-title="<?php echo article_title();?> &mdash; Screenshots">
+                        <?php images_for_post();?>
                     </div>
                     <div class="article__content">
                         <?php echo article_markdown();?>

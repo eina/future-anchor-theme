@@ -36,4 +36,12 @@ $(function() {
     });
 });
 
+//lightbox
+
+$(function() {
+    $('#gallery').Chocolat({
+        imageSize: 'contain'
+    });
+});
+
 
