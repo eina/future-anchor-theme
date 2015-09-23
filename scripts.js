@@ -1,5 +1,7 @@
 //navigation shenaningans
 var $header = $('#header'),
+    $mobileNav = $('#mobile-nav'),
+    $menuButton = $('#menu-button'),
     lastScrollTop = 0;
     var timer;
 
@@ -45,4 +47,8 @@ $(function() {
     });
 });
 
-
+//mobile nav
+$menuButton.click(function(e){
+    e.preventDefault();
+    $mobileNav.slideToggle('fast');
+});

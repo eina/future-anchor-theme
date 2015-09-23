@@ -8,7 +8,11 @@
 .site-header {
   position: fixed;
   top: 0;
-  overflow: hidden;
+  overflow: visible;
+
+  @media screen and (min-width: 1030px){
+    overflow: hidden;
+  }
 
   a {
     color: $specialtext;
@@ -68,9 +72,24 @@
       font-weight: 600;
       line-height: 3.5em;
 
+      &.mnav {
+        a:hover, a:focus {
+          border: none;
+          background-color: transparent;
+        }
+      }
+
       @media all and (min-width: 1030px){
         &.mnav {
           display: none;
+        }
+
+        &.nav__portfolio,
+        &.nav__about,
+        &.nav__contact {
+          &:hover, &:focus, &.active {
+            @include overline-reveal;
+          }
         }
       }
 
@@ -85,16 +104,60 @@
     }
   }
 
-  @import "../helpers/hoverCSS/overline-reveal";
+
 
   a {
     display: block;
     padding: 0 1.5em;
 
     &:hover, &:focus, &.active {
-      @include overline-reveal;
-      background-color: lighten($darkprimary, 3%);
       border-top: 3px solid darken($lightprimary, 13%);
+      background-color: lighten($darkprimary, 3%);
+    }
+  }
+}
+
+.mobile-nav {
+  position: relative;
+  z-index: 888;
+  display: none;
+
+  ul {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba($primarytext, 1);
+  }
+
+  li {
+    text-align: center;
+
+    &.nav__about {
+      border-top: 1px solid $divider;
+      border-bottom: 1px solid $divider;
+    }
+
+    a {
+      display: block;
+      padding: 1em 0;
+      color: lighten($divider, 30%);
+
+      &:hover, &:focus, &.active {
+        background-color: darken($primarytext, 20%);
+        font-weight: 700;
+      }
+    }
+  }
+
+  @media screen and (orientation: landscape), screen and (min-width: 600px){
+    ul {
+      position: absolute;
+      top: 0;
+      right: 0.25em;
+      width: 50%;
     }
   }
 }

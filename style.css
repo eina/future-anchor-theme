@@ -805,6 +805,7 @@ main {
   }
 }
 
+/* Overline Reveal */
 #header {
   width: 100%;
   height: 3.5em;
@@ -814,7 +815,12 @@ main {
 .site-header {
   position: fixed;
   top: 0;
-  overflow: hidden;
+  overflow: visible;
+}
+@media screen and (min-width: 1030px) {
+  .site-header {
+    overflow: hidden;
+  }
 }
 .site-header a {
   color: rgba(255, 255, 255, 0.8);
@@ -856,9 +862,6 @@ main {
   letter-spacing: 2px;
 }
 
-.main-nav {
-  /* Overline Reveal */
-}
 .main-nav ul {
   list-style: none;
   margin: 0;
@@ -870,9 +873,47 @@ main {
   font-weight: 600;
   line-height: 3.5em;
 }
+.main-nav ul li.mnav a:hover, .main-nav ul li.mnav a:focus {
+  border: none;
+  background-color: transparent;
+}
 @media all and (min-width: 1030px) {
   .main-nav ul li.mnav {
     display: none;
+  }
+  .main-nav ul li.nav__portfolio:hover, .main-nav ul li.nav__portfolio:focus, .main-nav ul li.nav__portfolio.active, .main-nav ul li.nav__about:hover, .main-nav ul li.nav__about:focus, .main-nav ul li.nav__about.active, .main-nav ul li.nav__contact:hover, .main-nav ul li.nav__contact:focus, .main-nav ul li.nav__contact.active {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+  }
+  .main-nav ul li.nav__portfolio:hover:before, .main-nav ul li.nav__portfolio:focus:before, .main-nav ul li.nav__portfolio.active:before, .main-nav ul li.nav__about:hover:before, .main-nav ul li.nav__about:focus:before, .main-nav ul li.nav__about.active:before, .main-nav ul li.nav__contact:hover:before, .main-nav ul li.nav__contact:focus:before, .main-nav ul li.nav__contact.active:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #79dce8;
+    height: 3px;
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .main-nav ul li.nav__portfolio:hover:hover:before, .main-nav ul li.nav__portfolio:hover:focus:before, .main-nav ul li.nav__portfolio:hover:active:before, .main-nav ul li.nav__portfolio:focus:hover:before, .main-nav ul li.nav__portfolio:focus:focus:before, .main-nav ul li.nav__portfolio:focus:active:before, .main-nav ul li.nav__portfolio.active:hover:before, .main-nav ul li.nav__portfolio.active:focus:before, .main-nav ul li.nav__portfolio.active:active:before, .main-nav ul li.nav__about:hover:hover:before, .main-nav ul li.nav__about:hover:focus:before, .main-nav ul li.nav__about:hover:active:before, .main-nav ul li.nav__about:focus:hover:before, .main-nav ul li.nav__about:focus:focus:before, .main-nav ul li.nav__about:focus:active:before, .main-nav ul li.nav__about.active:hover:before, .main-nav ul li.nav__about.active:focus:before, .main-nav ul li.nav__about.active:active:before, .main-nav ul li.nav__contact:hover:hover:before, .main-nav ul li.nav__contact:hover:focus:before, .main-nav ul li.nav__contact:hover:active:before, .main-nav ul li.nav__contact:focus:hover:before, .main-nav ul li.nav__contact:focus:focus:before, .main-nav ul li.nav__contact:focus:active:before, .main-nav ul li.nav__contact.active:hover:before, .main-nav ul li.nav__contact.active:focus:before, .main-nav ul li.nav__contact.active:active:before {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 @media all and (max-width: 1030px) {
@@ -885,40 +926,47 @@ main {
   padding: 0 1.5em;
 }
 .main-nav a:hover, .main-nav a:focus, .main-nav a.active {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  overflow: hidden;
-  background-color: #00a5b6;
   border-top: 3px solid #79dce8;
+  background-color: #00a5b6;
 }
-.main-nav a:hover:before, .main-nav a:focus:before, .main-nav a.active:before {
-  content: "";
+
+.mobile-nav {
+  position: relative;
+  z-index: 888;
+  display: none;
+}
+.mobile-nav ul {
+  list-style: none;
   position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 0;
   top: 0;
-  background: #79dce8;
-  height: 3px;
-  -webkit-transform: translateY(-1px);
-  transform: translateY(-1px);
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #212121;
 }
-.main-nav a:hover:hover:before, .main-nav a:hover:focus:before, .main-nav a:hover:active:before, .main-nav a:focus:hover:before, .main-nav a:focus:focus:before, .main-nav a:focus:active:before, .main-nav a.active:hover:before, .main-nav a.active:focus:before, .main-nav a.active:active:before {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
+.mobile-nav li {
+  text-align: center;
+}
+.mobile-nav li.nav__about {
+  border-top: 1px solid #B6B6B6;
+  border-bottom: 1px solid #B6B6B6;
+}
+.mobile-nav li a {
+  display: block;
+  padding: 1em 0;
+  color: white;
+}
+.mobile-nav li a:hover, .mobile-nav li a:focus, .mobile-nav li a.active {
+  background-color: black;
+  font-weight: 700;
+}
+@media screen and (orientation: landscape), screen and (min-width: 600px) {
+  .mobile-nav ul {
+    position: absolute;
+    top: 0;
+    right: 0.25em;
+    width: 50%;
+  }
 }
 
 .posts .site-header, .about .site-header, .contact .site-header {
@@ -1289,6 +1337,8 @@ main header .portfolio-header .button {
   }
   .single .article__details .screen-gallery ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
   }
   .single .article__details .screen-gallery h3, .single .article__details .screen-gallery .title {
     display: none;
