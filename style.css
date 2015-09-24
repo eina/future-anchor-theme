@@ -404,7 +404,7 @@ html {
 }
 
 /*Helpers*/
-.button, .case-study, .view-live, .contact form button, .piece .featured-image, .single .article__intro figure.screenshot, .single .article__details .screen-gallery .shot {
+.button, .case-study, .view-live, .contact form button, .piece .featured-image, .single .article__intro figure.screenshot, .single .article__details .article__content figcaption, .single .article__details .screen-gallery .shot {
   box-shadow: 0 5px 8px -2px rgba(114, 114, 114, 0.4);
 }
 
@@ -825,10 +825,6 @@ main {
 .site-header a {
   color: rgba(255, 255, 255, 0.8);
   opacity: 0.7;
-  transition: all 0.3s ease-in-out;
-}
-.site-header a:hover, .site-header a:focus, .site-header a.active {
-  opacity: 1;
 }
 .site-header .site-title {
   width: 32.20339%;
@@ -881,7 +877,10 @@ main {
   .main-nav ul li.mnav {
     display: none;
   }
-  .main-nav ul li.nav__portfolio:hover, .main-nav ul li.nav__portfolio:focus, .main-nav ul li.nav__portfolio.active, .main-nav ul li.nav__about:hover, .main-nav ul li.nav__about:focus, .main-nav ul li.nav__about.active, .main-nav ul li.nav__contact:hover, .main-nav ul li.nav__contact:focus, .main-nav ul li.nav__contact.active {
+  .main-nav ul li.nav__portfolio a, .main-nav ul li.nav__about a, .main-nav ul li.nav__contact a {
+    transition: all 0.3s ease-in-out;
+  }
+  .main-nav ul li.nav__portfolio a:hover, .main-nav ul li.nav__portfolio a:focus, .main-nav ul li.nav__portfolio a.active, .main-nav ul li.nav__about a:hover, .main-nav ul li.nav__about a:focus, .main-nav ul li.nav__about a.active, .main-nav ul li.nav__contact a:hover, .main-nav ul li.nav__contact a:focus, .main-nav ul li.nav__contact a.active {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: translateZ(0);
@@ -892,8 +891,9 @@ main {
     -moz-osx-font-smoothing: grayscale;
     position: relative;
     overflow: hidden;
+    opacity: 1;
   }
-  .main-nav ul li.nav__portfolio:hover:before, .main-nav ul li.nav__portfolio:focus:before, .main-nav ul li.nav__portfolio.active:before, .main-nav ul li.nav__about:hover:before, .main-nav ul li.nav__about:focus:before, .main-nav ul li.nav__about.active:before, .main-nav ul li.nav__contact:hover:before, .main-nav ul li.nav__contact:focus:before, .main-nav ul li.nav__contact.active:before {
+  .main-nav ul li.nav__portfolio a:hover:before, .main-nav ul li.nav__portfolio a:focus:before, .main-nav ul li.nav__portfolio a.active:before, .main-nav ul li.nav__about a:hover:before, .main-nav ul li.nav__about a:focus:before, .main-nav ul li.nav__about a.active:before, .main-nav ul li.nav__contact a:hover:before, .main-nav ul li.nav__contact a:focus:before, .main-nav ul li.nav__contact a.active:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -911,7 +911,7 @@ main {
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
-  .main-nav ul li.nav__portfolio:hover:hover:before, .main-nav ul li.nav__portfolio:hover:focus:before, .main-nav ul li.nav__portfolio:hover:active:before, .main-nav ul li.nav__portfolio:focus:hover:before, .main-nav ul li.nav__portfolio:focus:focus:before, .main-nav ul li.nav__portfolio:focus:active:before, .main-nav ul li.nav__portfolio.active:hover:before, .main-nav ul li.nav__portfolio.active:focus:before, .main-nav ul li.nav__portfolio.active:active:before, .main-nav ul li.nav__about:hover:hover:before, .main-nav ul li.nav__about:hover:focus:before, .main-nav ul li.nav__about:hover:active:before, .main-nav ul li.nav__about:focus:hover:before, .main-nav ul li.nav__about:focus:focus:before, .main-nav ul li.nav__about:focus:active:before, .main-nav ul li.nav__about.active:hover:before, .main-nav ul li.nav__about.active:focus:before, .main-nav ul li.nav__about.active:active:before, .main-nav ul li.nav__contact:hover:hover:before, .main-nav ul li.nav__contact:hover:focus:before, .main-nav ul li.nav__contact:hover:active:before, .main-nav ul li.nav__contact:focus:hover:before, .main-nav ul li.nav__contact:focus:focus:before, .main-nav ul li.nav__contact:focus:active:before, .main-nav ul li.nav__contact.active:hover:before, .main-nav ul li.nav__contact.active:focus:before, .main-nav ul li.nav__contact.active:active:before {
+  .main-nav ul li.nav__portfolio a:hover:hover:before, .main-nav ul li.nav__portfolio a:hover:focus:before, .main-nav ul li.nav__portfolio a:hover:active:before, .main-nav ul li.nav__portfolio a:focus:hover:before, .main-nav ul li.nav__portfolio a:focus:focus:before, .main-nav ul li.nav__portfolio a:focus:active:before, .main-nav ul li.nav__portfolio a.active:hover:before, .main-nav ul li.nav__portfolio a.active:focus:before, .main-nav ul li.nav__portfolio a.active:active:before, .main-nav ul li.nav__about a:hover:hover:before, .main-nav ul li.nav__about a:hover:focus:before, .main-nav ul li.nav__about a:hover:active:before, .main-nav ul li.nav__about a:focus:hover:before, .main-nav ul li.nav__about a:focus:focus:before, .main-nav ul li.nav__about a:focus:active:before, .main-nav ul li.nav__about a.active:hover:before, .main-nav ul li.nav__about a.active:focus:before, .main-nav ul li.nav__about a.active:active:before, .main-nav ul li.nav__contact a:hover:hover:before, .main-nav ul li.nav__contact a:hover:focus:before, .main-nav ul li.nav__contact a:hover:active:before, .main-nav ul li.nav__contact a:focus:hover:before, .main-nav ul li.nav__contact a:focus:focus:before, .main-nav ul li.nav__contact a:focus:active:before, .main-nav ul li.nav__contact a.active:hover:before, .main-nav ul li.nav__contact a.active:focus:before, .main-nav ul li.nav__contact a.active:active:before {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
@@ -1219,25 +1219,20 @@ main header .portfolio-header .button {
 }
 
 .piece .featured-image {
-  display: none;
+  display: block;
   overflow: hidden;
+  width: 83.05085%;
+  float: left;
+  margin-right: 1.69492%;
+  float: none;
+  margin: 0 auto 5.08475%;
+  height: 15em;
 }
 .piece .featured-image img {
   display: block;
   width: 100%;
   opacity: 0.80;
   transition: transform 5.5s ease .5s;
-}
-@media all and (min-width: 700px) {
-  .piece .featured-image {
-    display: block;
-    width: 83.05085%;
-    float: left;
-    margin-right: 1.69492%;
-    float: none;
-    margin: 0 auto 5.08475%;
-    height: 15em;
-  }
 }
 @media all and (min-width: 960px) {
   .piece .featured-image {
@@ -1262,14 +1257,8 @@ main header .portfolio-header .button {
   width: 100%;
   display: block;
 }
-.single figcaption {
-  background-color: #e5e5e5;
-  color: #727272;
-  text-align: center;
-  padding: 0.5em 0;
-}
 .single article {
-  padding: 1em 0;
+  padding: 1em 0 3em;
 }
 @media screen and (min-width: 1024px) {
   .single article {
@@ -1290,6 +1279,12 @@ main header .portfolio-header .button {
 .single .article__intro figure.screenshot {
   background-color: #00808d;
 }
+.single .article__intro figcaption {
+  background-color: #e5e5e5;
+  color: #727272;
+  text-align: center;
+  padding: 0.5em 0;
+}
 @media screen and (min-width: 960px) {
   .single .article__intro .article__content {
     width: 40.67797%;
@@ -1314,39 +1309,51 @@ main header .portfolio-header .button {
     margin-right: 0;
   }
 }
+.single .article__details .article__content figcaption {
+  background-color: #e9e9e9;
+  color: #727272;
+  text-align: center;
+  padding: 0.5em 0;
+}
 .single .article__details .screen-gallery .shot {
   display: none;
 }
-.single .article__details .screen-gallery .title {
-  display: list-item;
-}
-.single .article__details .screen-gallery h3 {
+.single .article__details .screen-gallery h3, .single .article__details .screen-gallery .title {
   display: block;
+}
+.single .article__details .screen-gallery .title {
+  text-align: left;
 }
 @media screen and (min-width: 960px) {
   .single .article__details .article__content {
     width: 57.62712%;
     float: right;
     margin-right: 0;
+    padding: 0 3.38983%;
   }
   .single .article__details .screen-gallery {
     width: 40.67797%;
     float: left;
     margin-right: 1.69492%;
-    padding: 1.69492%;
+    padding: 6.77966% 1.69492% 0;
   }
   .single .article__details .screen-gallery ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  .single .article__details .screen-gallery h3, .single .article__details .screen-gallery .title {
+  .single .article__details .screen-gallery h3 {
     display: none;
+  }
+  .single .article__details .screen-gallery li {
+    margin-bottom: 5.08475%;
   }
   .single .article__details .screen-gallery .shot {
     display: block;
     width: 100%;
-    margin-bottom: 1em;
+  }
+  .single .article__details .screen-gallery .title {
+    text-align: center;
   }
 }
 

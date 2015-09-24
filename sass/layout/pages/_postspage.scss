@@ -45,7 +45,6 @@
       }
     }
 
-
   }
 
 }
@@ -54,8 +53,12 @@
 .piece {
 
   .featured-image {
-    display: none;
+    display: block;
     overflow: hidden;
+    @include span(10);
+    float: none;
+    margin: 0 auto (gutter()*3);
+    height: 15em;
     @extend %img-shadow;
 
     img{
@@ -63,14 +66,6 @@
       width: 100%;
       opacity: 0.80;
       transition: transform 5.5s ease .5s;
-    }
-
-    @media all and (min-width: 700px){
-      display: block;
-      @include span(10);
-      float: none;
-      margin: 0 auto (gutter()*3);
-      height: 15em;
     }
 
     @media all and (min-width: 960px){

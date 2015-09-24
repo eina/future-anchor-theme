@@ -71,16 +71,26 @@ function project_url(){
 function images_for_post(){
     //grab the slug custom field that has the name as the images
     $imgSlug = article_custom_field('img-slug');
-    if(!empty($imgSlug)){
+    $screenTitles = article_custom_field('screen-titles');
+    $hasContent ='';
+    if(!empty($imgSlug) && !empty($screenTitles)){
+        $hasContent = true;
         //put the files with the slug in an array
+        $count = '';
         $images = glob('content/'.$imgSlug.'/{*.jpg,*.png}', GLOB_BRACE);
+        $title = explode("|", $screenTitles);
+        //var_dump($title);
         echo '<ul>';
         foreach ($images as $anImage){
+            $count++;
             echo '<li><a class="chocolat-image" href="/anchor/'.$anImage.'">';
-            echo '<span class="title">I am a title</span>';
-            echo'<img class="shot" src="/anchor/'.$anImage.'" alt="'.article_title().' Screenshot"></a></li>';
+            echo'<img class="shot" src="/anchor/'.$anImage.'" alt="'.article_title().' Screenshot"><figcaption><span class="title">';
+            echo $title[$count - 1];
+            echo'</span></figcaption></a></li>';
         }
         echo '</ul>';
+    }else {
+        $hasContent = false;
     }
 }
 

@@ -4,16 +4,9 @@
     display: block;
   }
 
-  figcaption {
-    background-color: lighten($secondarytext, 45%);
-    color: $secondarytext;
-    text-align: center;
-    padding: 0.5em 0;
-  }
-
   //general article styling
   article {
-    padding: 1em 0;
+    padding: 1em 0 3em;
 
     @media screen and (min-width: 1024px){
       padding: 2em 0;
@@ -41,6 +34,14 @@
       @extend %img-shadow;
     }
 
+    figcaption {
+      background-color: lighten($secondarytext, 45%);
+      color: $secondarytext;
+      text-align: center;
+      padding: 0.5em 0;
+    }
+
+
     @media screen and (min-width: 960px){
       .article__content {
         @include span (5);
@@ -62,32 +63,40 @@
 
   //content article styling
   .article__details {
+    .article__content {
+      figcaption {
+        background-color: lighten($divider, 20%);
+        color: $secondarytext;
+        text-align: center;
+        padding: 0.5em 0;
+        @extend %img-shadow;
+      }
+    }
+
     .screen-gallery {
       .shot {
         @extend %img-shadow;
         display: none;
       }
 
-      .title {
-        display: list-item;
-        //margin: 0.35em 0 0.35em 0.75em;
+      h3, .title {
+        display: block;
       }
 
-      h3 {
-        display: block;
+      .title {
+        text-align: left;
       }
     }
 
     @media screen and (min-width: 960px){
       .article__content {
         @include span(7 last);
+        padding: 0 gutter()*2;
       }
 
       .screen-gallery{
         @include span(5);
-        //height: 500px;
-        padding: gutter();
-        //background-color: #00808d;
+        padding: (gutter()*4) gutter() 0;
 
         ul {
           list-style: none;
@@ -95,14 +104,21 @@
           margin: 0;
         }
 
-        h3, .title {
+        h3 {
           display: none;
+        }
+
+        li {
+          margin-bottom: gutter()*3;
         }
 
         .shot {
           display: block;
           width: 100%;
-          margin-bottom: 1em;
+        }
+
+        .title {
+          text-align: center;
         }
       }
     }
