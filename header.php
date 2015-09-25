@@ -84,9 +84,11 @@ function images_for_post(){
         foreach ($images as $anImage){
             $count++;
             echo '<li><a class="chocolat-image" href="/anchor/'.$anImage.'">';
-            echo'<img class="shot" src="/anchor/'.$anImage.'" alt="'.article_title().' Screenshot"><figcaption><span class="title">';
+            echo'<img class="shot" src="/anchor/'.$anImage.'" alt="';
             echo $title[$count - 1];
-            echo'</span></figcaption></a></li>';
+            echo' Screenshot"><span class="title">';
+            echo $title[$count - 1];
+            echo'</span></a></li>';
         }
         echo '</ul>';
     }else {
@@ -96,7 +98,7 @@ function images_for_post(){
 
 //show the extra html field
 function show_extra($surroundingtag, $class){
-    if(!empty(article_custom_field('extra'))){
+    if(trim(article_custom_field('extra')) == false){
         $extra=article_custom_field('extra');
         echo '<'.$surroundingtag.' class="'. $class .'">'.$extra.'</'.$surroundingtag.'>';
     }

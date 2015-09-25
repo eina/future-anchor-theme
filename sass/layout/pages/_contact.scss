@@ -50,7 +50,7 @@
     button {
       background: transparent;
       float: right;
-      @include ghost-button( $active: darken($primary, 5%), $hover: $primarytext);
+      @include ghost-button($bg:lighten($primarytext, 15%));
     }
 
   }

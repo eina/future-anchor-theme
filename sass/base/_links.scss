@@ -1,0 +1,28 @@
+a {
+  font-weight: 600;
+  padding-bottom: 1px;
+  border-bottom: 2px solid darken($lightprimary, 23%);
+  color: $darkaccent;
+
+  &:hover, &:focus {
+    border-color: $secondarytext;
+    color: $primarytext;
+  }
+
+  @media screen and (min-width: 960px){
+    transition: all 0.3s ease;
+  }
+}
+
+#header a, a#top-bottom{
+  border: none;
+}
+
+footer a{
+  color: $lightprimary;
+
+  &:hover, &:focus {
+    color: darken($lightprimary, 15%);
+    border-color: darken($primary, 5%);
+  }
+}

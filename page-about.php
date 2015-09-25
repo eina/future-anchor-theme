@@ -9,5 +9,4 @@
                 <?php echo page_content();?>
             </div>
         </article>
-    </main>
 <?php theme_include('footer');?>

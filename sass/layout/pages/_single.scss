@@ -6,17 +6,17 @@
 
   //general article styling
   article {
-    padding: 1em 0 3em;
+    padding: 1em 0 5em;
 
     @media screen and (min-width: 1024px){
-      padding: 2em 0;
+      padding: 2em 0 4em;
       .wrap {
         padding: 0 3em;
       }
     }
 
     @media screen and (min-width: 1440px){
-      padding: 4em 0;
+      padding: 4em 0 6em;
       .wrap {
         padding: 0 gutter();
       }
@@ -29,8 +29,12 @@
     .article__content {
     }
 
+    aside p {
+      text-align: center;
+      margin-top: 2em;
+    }
+
     figure.screenshot {
-      background-color: #00808d;
       @extend %img-shadow;
     }
 
@@ -46,24 +50,21 @@
       .article__content {
         @include span (5);
       }
-      figure.screenshot {
+      aside {
         @include span (6 last);
       }
     }
 
-    @media screen and (min-width: 1440px){
-      .article__content {
-        @include span (5);
-      }
-      figure.screenshot {
-        @include span (6 last);
-      }
-    }
   }
 
   //content article styling
   .article__details {
     .article__content {
+      figure {
+        margin: 2em 0;
+        padding: 0 gutter()*3;
+      }
+
       figcaption {
         background-color: lighten($divider, 20%);
         color: $secondarytext;
@@ -73,55 +74,13 @@
       }
     }
 
-    .screen-gallery {
-      .shot {
-        @extend %img-shadow;
-        display: none;
-      }
-
-      h3, .title {
-        display: block;
-      }
-
-      .title {
-        text-align: left;
-      }
-    }
-
     @media screen and (min-width: 960px){
       .article__content {
-        @include span(7 last);
-        padding: 0 gutter()*2;
-      }
-
-      .screen-gallery{
-        @include span(5);
-        padding: (gutter()*4) gutter() 0;
-
-        ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-
-        h3 {
-          display: none;
-        }
-
-        li {
-          margin-bottom: gutter()*3;
-        }
-
-        .shot {
-          display: block;
-          width: 100%;
-        }
-
-        .title {
-          text-align: center;
-        }
+        @include span(9);
+        margin-left: span(1.5);
       }
     }
+
   }
 
 }

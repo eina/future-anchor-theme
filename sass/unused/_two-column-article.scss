@@ -1,0 +1,64 @@
+.article__content {
+  figure {
+    margin: 2em 0;
+    padding: 0 gutter()*3;
+  }
+
+  figcaption {
+    background-color: lighten($divider, 20%);
+    color: $secondarytext;
+    text-align: center;
+    padding: 0.5em 0;
+    @extend %img-shadow;
+  }
+}
+
+.screen-gallery {
+  .shot {
+    @extend %img-shadow;
+    display: none;
+  }
+
+  h3, .title {
+    display: block;
+  }
+
+  .title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 960px){
+  .article__content {
+    @include span(7 last);
+    padding: 0 gutter()*2;
+  }
+
+  .screen-gallery{
+    @include span(5);
+    padding: (gutter()*2) gutter()*4 0 0;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    h3 {
+      display: none;
+    }
+
+    li {
+      margin-bottom: gutter()*3;
+    }
+
+    .shot {
+      display: block;
+      width: 100%;
+    }
+
+    .title {
+      text-align: center;
+    }
+  }
+}

@@ -1,6 +1,9 @@
+<a class="top-bottom" id="top-bottom" href="#top">Top</a>
+
+</main>
 <footer>
     <div class="wrap">
-        <span class="regular">This site was built with love & Anchor by Eina Onting.</span><span class="mobile_footer"><a href="<?php echo base_url();?>about">About</a> / <a href="<?php echo base_url();?>contact">Contact</a> / <a href="#top">Top</a></span>
+        <span class="regular">Copyright <?php echo date('Y');?> Eina Onting</span><span class="mobile_footer"><a href="#top">Portfolio</a> / <a href="<?php echo base_url();?>about">About</a> / <a href="<?php echo base_url();?>contact">Contact</a></span>
     </div>
 </footer>
 </div><!--end site-container-->

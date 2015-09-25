@@ -28,5 +28,4 @@
 
             </div>
         </article>
-    </main>
 <?php theme_include('footer');?>

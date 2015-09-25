@@ -1,3 +1,24 @@
+.top-bottom {
+  display: none;
+  position: fixed;
+  right: 0.75em;
+  bottom: 3.1em;
+  padding: 1em 1.5em;
+  background-color: lighten($divider, 10%);
+  color: $secondarytext;
+
+  opacity: 0.8;
+
+  &:hover, &:focus {
+    opacity: 1;
+  }
+
+  @media screen and (960px){
+    right: 3em;
+  }
+}
+
+
 footer {
   width: 100%;
   min-height: 3em;

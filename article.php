@@ -15,23 +15,28 @@ $imgSlug = article_custom_field('img-slug');?>
                         <?php show_tags();?>
                         <?php show_extra('div', 'extra');?>
                     </div>
-                    <figure class="screenshot">
-                        <?php feat_img();?>
-                        <figcaption>TSP Schedule Page</figcaption>
-                    </figure>
+                    <aside>
+                        <figure class="screenshot">
+                            <?php feat_img();?>
+                            <figcaption>TSP Schedule Page</figcaption>
+                        </figure>
+                        <p><a href="<?php project_url();?>" role="button" class="button">View Live</a></p>
+                    </aside>
                 </div>
             </article>
             <article class="article__details">
                 <div class="wrap">
-                    <div class="screen-gallery" id="gallery" data-chocolat-title="<?php echo article_title();?> &mdash; Screenshots">
+                    <!--<aside class="screen-gallery" id="gallery" data-chocolat-title="<?php echo article_title();?> &mdash; Screenshots">
                         <h3>Screenshots</h3>
                         <?php images_for_post();?>
-                    </div>
+                    </aside>-->
+
                     <div class="article__content">
                         <?php echo article_markdown();?>
                     </div>
+
+
                 </div>
             </article>
         </section><!--end post container-->
-    </main>
 <?php theme_include('footer');?>

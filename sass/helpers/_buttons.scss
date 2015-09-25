@@ -7,11 +7,15 @@
 
 //front page button
 .button {
+  @include ghost-button($bg: $primary);
+}
+
+aside .button {
   @include ghost-button();
 }
 
 .case-study, .view-live {
-  @include ghost-button($active: $darkprimary);
+  @include ghost-button($bg: $darkaccent);
 
   @media all and (max-width: 494px){
     display: block;
