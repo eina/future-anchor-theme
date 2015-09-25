@@ -98,7 +98,7 @@ function images_for_post(){
 
 //show the extra html field
 function show_extra($surroundingtag, $class){
-    if(trim(article_custom_field('extra')) == false){
+    if(trim(article_custom_field('extra')) == true){
         $extra=article_custom_field('extra');
         echo '<'.$surroundingtag.' class="'. $class .'">'.$extra.'</'.$surroundingtag.'>';
     }
