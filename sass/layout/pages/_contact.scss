@@ -43,8 +43,10 @@
 
 
     li {
-      margin-bottom: 1.5em;
+      margin-bottom: 1.8em;
     }
+
+    a { border-bottom: none;}
 
     .fa {
       color: $darkprimary;
@@ -52,8 +54,18 @@
       margin-right: 1em;
     }
 
+    a:hover .fa,
+    a:focus .fa{
+      color: $primarytext;
+    }
+
     .social-handle{
-      //display: block;
+      border-bottom: 2px solid $primary;
+    }
+
+    a:hover .social-handle,
+    a:focus .social-handle{
+      border-color: $secondarytext;
     }
   }
 

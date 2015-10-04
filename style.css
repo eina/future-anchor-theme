@@ -1071,6 +1071,16 @@ main {
   }
 }
 
+::selection {
+  background: #B2EBF2;
+  color: #212121;
+}
+
+::-moz-selection {
+  background: #B2EBF2;
+  color: #212121;
+}
+
 .posts, .about {
   background-image: url(http://www.transparenttextures.com/patterns/diamond-eyes.png);
 }
@@ -1112,12 +1122,26 @@ main {
   padding: 0;
 }
 .contact-content .social-list li {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.8em;
+}
+.contact-content .social-list a {
+  border-bottom: none;
 }
 .contact-content .social-list .fa {
   color: #0097A7;
   font-size: 1.5em;
   margin-right: 1em;
+}
+.contact-content .social-list a:hover .fa,
+.contact-content .social-list a:focus .fa {
+  color: #212121;
+}
+.contact-content .social-list .social-handle {
+  border-bottom: 2px solid #00BCD4;
+}
+.contact-content .social-list a:hover .social-handle,
+.contact-content .social-list a:focus .social-handle {
+  border-color: #727272;
 }
 
 @media screen and (min-width: 960px) {

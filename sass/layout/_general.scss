@@ -19,3 +19,12 @@
     }
   }
 }
+
+::selection{
+  background: $lightprimary;
+  color: $primarytext;
+}
+::-moz-selection {
+  background: $lightprimary;
+  color: $primarytext;
+}

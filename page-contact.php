@@ -32,9 +32,9 @@
                     <h3 class="section-title">Elsewhere on the internet</h3>
                     <p>The internet is a vast, interesting and distracting place to be so here are some of my links:</p>
                     <ul class="social-list">
-                        <li class="twitter"><span class="fa fa-twitter"></span><span class="social-handle"><a href="https://twitter.com/littleblacksmth">@littleblacksmth</a></span></li>
-                        <li class="linkedin"><span class="fa fa-linkedin"></span><span class="social-handle"><a href="https://ca.linkedin.com/in/einaonting">/einaonting</a></span></li>
-                        <li class="github"><span class="fa fa-github"></span><span class="social-handle"><a href="https://github.com/thelittleblacksmith">/thelittleblacksmith</a></span></li>
+                        <li class="twitter"><a href="https://twitter.com/littleblacksmth"><span class="fa fa-twitter"></span><span class="social-handle">@littleblacksmth</span></a></li>
+                        <li class="linkedin"><a href="https://ca.linkedin.com/in/einaonting"><span class="fa fa-linkedin"></span><span class="social-handle">/einaonting</span></a></li>
+                        <li class="github"><a href="https://github.com/thelittleblacksmith"><span class="fa fa-github"></span><span class="social-handle">/thelittleblacksmith</span></a></li>
                     </ul>
                 </div>
             </div>
