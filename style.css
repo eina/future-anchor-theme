@@ -1079,10 +1079,56 @@ main {
   margin-bottom: 2.5em;
 }
 
-.contact form {
-  width: 50%;
-  float: left;
+.contact-content {
+  background-color: #e4e4e4;
+  margin-top: 15.25424%;
+  padding: 1.69492% 3.38983%;
+}
+@media screen and (min-width: 1280px) {
+  .contact-content .social-list {
+    width: 40.67797%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .contact-content {
+    width: 40.67797%;
+    float: right;
+    margin-right: 0;
+    background: none;
+    margin-top: 0;
+    padding: 0;
+  }
+  .contact-content .section-title {
+    text-align: right;
+    margin-top: 3rem;
+  }
+  .contact-content .social-list {
+    width: 57.62712%;
+    margin: 0 auto;
+  }
+}
+.contact-content .social-list {
+  list-style: none;
+  padding: 0;
+}
+.contact-content .social-list li {
+  margin-bottom: 1.5em;
+}
+.contact-content .social-list .fa {
+  color: #0097A7;
+  font-size: 1.5em;
   margin-right: 1em;
+}
+
+@media screen and (min-width: 960px) {
+  .contact form {
+    width: 40.67797%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+.contact form .form-lead {
+  padding: 1.69492% 0;
 }
 .contact form label, .contact form button, .contact form input, .contact form textarea {
   display: block;
@@ -1110,7 +1156,7 @@ main {
 }
 .contact form textarea {
   resize: none;
-  height: auto;
+  min-height: 8em;
   overflow: visible;
 }
 .contact form button {

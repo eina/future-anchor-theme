@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="<?php echo theme_url('style.css')?>" type="text/css">
     <link rel="stylesheet" href="<?php echo theme_url('chocolat/chocolat.css')?>" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!--fonts-->
     <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:700' rel='stylesheet' type='text/css'>
