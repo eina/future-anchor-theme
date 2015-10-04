@@ -1,23 +1,4 @@
 .piece {
-  @media all and (min-width: 280px){
-    //background-color: pink;
-  }
-
-  @media all and (min-width: 480px){
-    //background-color: palegoldenrod;
-  }
-
-  @media all and (min-width: 640px){
-    //background-color: paleturquoise;
-  }
-
-  @media all and (min-width: 1024px){
-    //background-color: palevioletred;
-  }
-}
-
-
-.piece {
   transition:all .2s linear;
   -o-transition:all .2s linear;
   -moz-transition:all .2s linear;

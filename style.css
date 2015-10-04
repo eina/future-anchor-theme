@@ -1051,6 +1051,26 @@ main {
   box-shadow: 0 1px 5px 0 rgba(96, 125, 139, 0.45);
 }
 
+.single article, .contact article, .about article {
+  padding: 1em 0 5em;
+}
+@media screen and (min-width: 1024px) {
+  .single article, .contact article, .about article {
+    padding: 2em 0 4em;
+  }
+  .single article .wrap, .contact article .wrap, .about article .wrap {
+    padding: 0 3em;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .single article, .contact article, .about article {
+    padding: 4em 0 6em;
+  }
+  .single article .wrap, .contact article .wrap, .about article .wrap {
+    padding: 0 1.69492%;
+  }
+}
+
 .posts, .about {
   background-image: url(http://www.transparenttextures.com/patterns/diamond-eyes.png);
 }
@@ -1151,22 +1171,22 @@ main {
   transform: scaleY(1);
 }
 
-.posts section:nth-of-type(even), .posts article:nth-of-type(even), .contact section:nth-of-type(even), .contact article:nth-of-type(even) {
+.posts section:nth-of-type(even), .posts article:nth-of-type(even) {
   background-color: #e4e4e4;
 }
-.posts article, .contact article {
+.posts article {
   padding: 2.5em 3.38983%;
 }
-.posts article:first-child, .contact article:first-child {
+.posts article:first-child {
   margin-top: 0;
 }
 @media screen and (min-width: 600px) {
-  .posts article, .contact article {
+  .posts article {
     padding: 3.2em 0;
   }
 }
 @media screen and (min-width: 1024px) {
-  .posts article, .contact article {
+  .posts article {
     padding: 7.5em 0;
   }
 }
@@ -1338,25 +1358,6 @@ main header .portfolio-header .button {
 .single img {
   width: 100%;
   display: block;
-}
-.single article {
-  padding: 1em 0 5em;
-}
-@media screen and (min-width: 1024px) {
-  .single article {
-    padding: 2em 0 4em;
-  }
-  .single article .wrap {
-    padding: 0 3em;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .single article {
-    padding: 4em 0 6em;
-  }
-  .single article .wrap {
-    padding: 0 1.69492%;
-  }
 }
 .single .article__intro aside p {
   text-align: center;
