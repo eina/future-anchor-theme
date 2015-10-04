@@ -5,7 +5,6 @@
         </header>
         <article>
             <div class="wrap">
-                ABOOUTTTTT
                 <?php echo page_content();?>
             </div>
         </article>
