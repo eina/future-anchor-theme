@@ -8,6 +8,8 @@ html, body {
   min-height: 100vh;
   position: relative;
   @extend %clearfix;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
 }
 
 main {

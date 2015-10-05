@@ -2,7 +2,7 @@
     <!--start the blog page-->
     <main>
         <header>
-            <h1 class="page-title"><?php echo page_title();?></h1>
+            <h1 class="page-title animated slideInDown"><?php echo page_title();?></h1>
         </header>
         <article>
             <div class="wrap">
@@ -35,6 +35,7 @@
                         <li class="twitter"><a href="https://twitter.com/littleblacksmth"><span class="fa fa-twitter"></span><span class="social-handle">@littleblacksmth</span></a></li>
                         <li class="linkedin"><a href="https://ca.linkedin.com/in/einaonting"><span class="fa fa-linkedin"></span><span class="social-handle">/einaonting</span></a></li>
                         <li class="github"><a href="https://github.com/thelittleblacksmith"><span class="fa fa-github"></span><span class="social-handle">/thelittleblacksmith</span></a></li>
+                        <li class="instagram"><a href="https://instagram.com/thelittleblacksmith"><span class="fa fa-instagram"></span><span class="social-handle">@thelittleblacksmith</span></a></li>
                     </ul>
                 </div>
             </div>

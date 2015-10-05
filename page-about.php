@@ -1,11 +1,14 @@
 <?php theme_include('header');?>
     <main>
         <header>
-            <h1 class="page-title"><?php echo page_title();?></h1>
+            <h1 class="page-title animated slideInDown"><?php echo page_title();?></h1>
         </header>
         <article>
             <div class="wrap">
-                <?php echo page_content();?>
+                <div class="page-content">
+                    <?php echo page_content();?>
+                </div>
+                <?php show_extra('div', 'my-status');?>
             </div>
         </article>
 <?php theme_include('footer');?>

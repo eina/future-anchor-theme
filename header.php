@@ -7,7 +7,7 @@
     <meta name="generator" content="Anchor CMS" />
 
     <link rel="stylesheet" href="<?php echo theme_url('style.css')?>" type="text/css">
-    <link rel="stylesheet" href="<?php echo theme_url('chocolat/chocolat.css')?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo theme_url('animate.min.css')?>" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!--fonts-->
@@ -30,7 +30,7 @@
 <?php
 echo '<body class="'.body_class().'">';
 ?>
-<div class="site-container" id="top">
+<div class="site-container animated fadeIn" id="top">
 <?php theme_include('head-nav');?>
 
 
@@ -68,39 +68,18 @@ function project_url(){
     }
 }
 
-//display images related to post from the content folder
-function images_for_post(){
-    //grab the slug custom field that has the name as the images
-    $imgSlug = article_custom_field('img-slug');
-    $screenTitles = article_custom_field('screen-titles');
-    $hasContent ='';
-    if(!empty($imgSlug) && !empty($screenTitles)){
-        $hasContent = true;
-        //put the files with the slug in an array
-        $count = '';
-        $images = glob('content/'.$imgSlug.'/{*.jpg,*.png}', GLOB_BRACE);
-        $title = explode("|", $screenTitles);
-        //var_dump($title);
-        echo '<ul>';
-        foreach ($images as $anImage){
-            $count++;
-            echo '<li><a class="chocolat-image" href="/anchor/'.$anImage.'">';
-            echo'<img class="shot" src="/anchor/'.$anImage.'" alt="';
-            echo $title[$count - 1];
-            echo' Screenshot"><span class="title">';
-            echo $title[$count - 1];
-            echo'</span></a></li>';
-        }
-        echo '</ul>';
-    }else {
-        $hasContent = false;
-    }
-}
-
 //show the extra html field
 function show_extra($surroundingtag, $class){
-    if(trim(article_custom_field('extra')) == true){
-        $extra=article_custom_field('extra');
-        echo '<'.$surroundingtag.' class="'. $class .'">'.$extra.'</'.$surroundingtag.'>';
+    if(is_article()){
+        if(trim(article_custom_field('extra')) == true){
+            $extra=article_custom_field('extra');
+            echo '<'.$surroundingtag.' class="'. $class .'">'.$extra.'</'.$surroundingtag.'>';
+        }
+    }
+    else if(is_page()){
+        if(trim(article_custom_field('page-extra')) == true){
+            $extra=article_custom_field('page-extra');
+            echo '<'.$surroundingtag.' class="'. $class .'">'.$extra.'</'.$surroundingtag.'>';
+        }
     }
 }

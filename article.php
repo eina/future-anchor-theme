@@ -4,7 +4,7 @@ $imgSlug = article_custom_field('img-slug');?>
     <main>
         <section class="single"><!--contains the post-->
             <header><!-- style="background:url('/anchor/content/<?php echo $imgSlug;?>-head.jpg') no-repeat center top; background-size: cover;"-->
-                <h1 class="page-title"><?php echo article_title();?></h1>
+                <h1 class="page-title animated slideInDown"><?php echo article_title();?></h1>
             </header>
             <article class="article__intro">
                 <div class="wrap">
