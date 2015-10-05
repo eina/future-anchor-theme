@@ -1083,6 +1083,20 @@ main {
   color: #212121;
 }
 
+.error {
+  background-color: #0097A7;
+}
+.error article {
+  margin-bottom: 15.25424%;
+}
+.error article p {
+  font-size: 175%;
+  line-height: inherit;
+}
+.error article p, .error article a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .posts, .about {
   background-image: url(http://www.transparenttextures.com/patterns/diamond-eyes.png);
 }
@@ -1242,6 +1256,28 @@ main {
 .contact form button:hover:before, .contact form button:focus:before, .contact form button:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
+}
+
+@media screen and (min-width: 960px) {
+  .about .page-content {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  .about .my-status {
+    width: 40.67797%;
+    float: right;
+    margin-right: 0;
+  }
+  .about .my-status .section-title {
+    text-align: right;
+  }
+}
+.about .my-status ul {
+  margin: 0;
+}
+.about .my-status li {
+  margin-bottom: 0.5em;
 }
 
 .posts section:nth-of-type(even), .posts article:nth-of-type(even) {

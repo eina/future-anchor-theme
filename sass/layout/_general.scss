@@ -28,3 +28,19 @@
   background: $lightprimary;
   color: $primarytext;
 }
+
+.error {
+  background-color: $darkprimary;
+
+  article {
+    margin-bottom: span(2);
+
+    p {
+      font-size: 175%;
+      line-height: inherit;
+    }
+    p, a {
+      color: $specialtext;
+    }
+  }
+}

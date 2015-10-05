@@ -31,7 +31,7 @@
 echo '<body class="'.body_class().'">';
 ?>
 <div class="site-container animated fadeIn" id="top">
-<?php theme_include('head-nav');?>
+    <?php theme_include('head-nav');?>
 
 
 <?php
@@ -70,16 +70,14 @@ function project_url(){
 
 //show the extra html field
 function show_extra($surroundingtag, $class){
-    if(is_article()){
-        if(trim(article_custom_field('extra')) == true){
-            $extra=article_custom_field('extra');
-            echo '<'.$surroundingtag.' class="'. $class .'">'.$extra.'</'.$surroundingtag.'>';
-        }
+    if(trim(article_custom_field('extra')) == true){
+        $extra=article_custom_field('extra');
+        echo '<'.$surroundingtag.' class="'. $class .'">'.$extra.'</'.$surroundingtag.'>';
     }
-    else if(is_page()){
-        if(trim(article_custom_field('page-extra')) == true){
-            $extra=article_custom_field('page-extra');
-            echo '<'.$surroundingtag.' class="'. $class .'">'.$extra.'</'.$surroundingtag.'>';
-        }
+}
+
+function show_page_extra(){
+    if(trim(page_custom_field('page-extra')) == true){
+        echo page_custom_field('page-extra');
     }
 }

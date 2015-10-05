@@ -8,7 +8,10 @@
                 <div class="page-content">
                     <?php echo page_content();?>
                 </div>
-                <?php show_extra('div', 'my-status');?>
+                <div class="my-status">
+                    <?php show_page_extra();?>
+
+                </div>
             </div>
         </article>
 <?php theme_include('footer');?>

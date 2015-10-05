@@ -1,0 +1,27 @@
+.about {
+
+  @media screen and (min-width: 960px){
+    .page-content {
+      @include span(6);
+    }
+
+    .my-status {
+      @include span(5 last);
+      .section-title {
+        text-align: right;
+      }
+    }
+
+  }
+
+  .my-status{
+    ul {
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+
+}

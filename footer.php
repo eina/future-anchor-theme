@@ -3,7 +3,7 @@
 </main>
 <footer>
     <div class="wrap">
-        <span class="regular">Copyright <?php echo date('Y');?> Eina Onting</span><span class="mobile_footer"><a href="#top">Portfolio</a> / <a href="<?php echo base_url();?>about">About</a> / <a href="<?php echo base_url();?>contact">Contact</a></span>
+        <span class="regular">Built on <a href="http://anchorcms.com" alt="External link to Anchor CMS' homepage">Anchor CMS</a> &mdash; Copyright <?php echo date('Y');?> &mdash; Eina Onting</span><span class="mobile_footer"><a href="#top">Portfolio</a> / <a href="<?php echo base_url();?>about">About</a> / <a href="<?php echo base_url();?>contact">Contact</a></span>
     </div>
 </footer>
 </div><!--end site-container-->
