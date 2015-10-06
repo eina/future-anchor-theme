@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Anchor CMS" />
 
-    <link rel="stylesheet" href="<?php echo theme_url('style.css')?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo theme_url('lstyle.css')?>" type="text/css">
     <link rel="stylesheet" href="<?php echo theme_url('animate.min.css')?>" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="icon" href="<?php echo theme_url('favicon.png')?>" type="image/png">
 
     <!--fonts-->
     <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:700' rel='stylesheet' type='text/css'>
@@ -43,7 +44,7 @@ function show_tags(){
         $tagarray = array();
         $tagexplode = explode(",", article_custom_field('tags'));
         foreach ($tagexplode as $taggy) {
-            $tagarray[] = '<li>'.strtoupper($taggy).'</li>';
+            $tagarray[] = '<li>'.ltrim($taggy, " ").'</li>';
             /*$tagarray[] = '<li><a href="'.tagged_url().'/'.$taggy.'">'.strtoupper($taggy).'</a></li>';*/
         }
         echo '<ul>' . implode($tagarray) . '</ul>';
@@ -54,7 +55,7 @@ function show_tags(){
 function feat_img(){
     $featImg = article_custom_field('featimg');
     if(!empty($featImg)){
-        echo '<img src="'.$featImg.'" alt="'.article_title().'">';
+        echo '<img src="'.$featImg.'" alt="Screenshot of'.article_title().'">';
     }
 }
 

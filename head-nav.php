@@ -8,7 +8,7 @@
         <nav role="navigation" class="main-nav">
             <ul>
                 <li class="mnav" id="menu-button"><a href="#">MENU</a></li>
-                <li class="nav__portfolio"><a <?php if(is_postspage() ) { echo 'class="active';}?>" href="<?php echo base_url();?>portfolio<?php if(!is_homepage()){echo '#content';}?>">Portfolio</a></li>
+                <li class="nav__portfolio"><a <?php if(is_postspage() ) { echo 'class="active';}?>" href="<?php echo base_url();?>portfolio#content">Portfolio</a></li>
                 <li class="nav__about"><a <?php if(page_name() == 'About' ) { echo 'class="active"';}?>" href="<?php echo base_url();?>about">About</a></li>
                 <li class="nav__contact"><a <?php if(page_name() == 'Contact' ) { echo 'class="active"';}?>" href="<?php echo base_url();?>contact">Contact</a></li>
             </ul>

@@ -13,7 +13,7 @@
     opacity: 1;
   }
 
-  @media screen and (960px){
+  @media screen and (min-width: 960px){
     right: 3em;
   }
 }
